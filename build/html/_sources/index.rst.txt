@@ -1,4 +1,4 @@
-BCPU documentation
+BCPU data structure
 ===================
 
 Contents
