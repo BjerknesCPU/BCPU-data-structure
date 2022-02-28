@@ -1,8 +1,16 @@
-BCPU documentation
-==================
+BCPU data structure
+===================
 
-This repository is currently being constructed to hold documentation for the
-Bjerknes Climate Prediction Unit.
+This repository is currently being constructed to hold documentation for
+Bjerknes Climate Prediction Unit (BCPU) data storage model. This is
+version controlled in 'releases' which are defined by GitHub tags,
+as explained in the documentation.
 
-Currently the documentation can only be built locally, but this will soon
-be hosted with readthedocs.
+The data storage documentation built using this repository can be found
+here: https://bjerknescpu.github.io/BCPU-data-structure/index.html.
+
+Other documentation for the BCPU team can be found here:
+file:///home/tbi045/Projects/BCPU-documentation/docs/index.html.
+
+
+

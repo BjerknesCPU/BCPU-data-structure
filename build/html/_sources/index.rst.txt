@@ -1,4 +1,4 @@
-BCPU documentation
+BCPU data structure
 ===================
 
 Contents
@@ -10,4 +10,7 @@ Contents
   storage/storage_locations
   storage/storage_structure
   storage/data_readme
+
+  BCPU documentation <https://bjerknescpu.github.io/BCPU-documentation/index.html>
+
 
