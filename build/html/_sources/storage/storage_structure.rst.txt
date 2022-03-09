@@ -272,7 +272,7 @@ even diagnostic scripts can exist in this directory of the data structure.
 Users directory
 ---------------
 
-personal code, plots and other files belonging to a user should be
+Personal code, plots and other files belonging to a user should be
 placed in a directory within **users/**. It is recommended that the name of a
 user's directory matches their username. The structure of individual user
 directories is not regulated, and this space can be organized to the user's
@@ -281,7 +281,7 @@ convenience.
 Projects directory
 ------------------
 
-projects can contain data, scripts and outputs, and it may be
+Projects can contain data, scripts and outputs, and it may be
 convenient to store these related files in one directory, in this case a
 directory named after the project can be placed in the **projects/** directory.
 The organization of these spaces is the responsibility of the project manager.
@@ -289,13 +289,13 @@ The organization of these spaces is the responsibility of the project manager.
 Repos directory
 ---------------
 
-local copies of shared Git repositories will reside here, there
+Local copies of shared Git repositories will reside here, there
 is a version of all of these files within the BjerknesCPU GitHub.
 
 www directory
 -------------
 
-this directory contains files to be accessible through the web
+This directory contains files to be accessible through the web
 interface at http://ns9039k.web.sigma2.no/.
 
 
