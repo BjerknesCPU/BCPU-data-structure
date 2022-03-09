@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Storage locations &mdash; BCPU-data-structure 0.1 documentation</title>
+  <title>Release tags &mdash; BCPU-data-structure 0.1 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -18,8 +18,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Storage structure" href="storage_structure.html" />
-    <link rel="prev" title="BCPU data structure" href="../index.html" /> 
+    <link rel="next" title="README files" href="data_readme.html" />
+    <link rel="prev" title="Storage structure" href="storage_structure.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -41,12 +41,9 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Storage locations</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#nird">NIRD</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="storage_locations.html">Storage locations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="storage_structure.html">Storage structure</a></li>
-<li class="toctree-l1"><a class="reference internal" href="release_tags.html">Release tags</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Release tags</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data_readme.html">README files</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CMIP_data.html">CMIP data</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://bjerknescpu.github.io/BCPU-documentation/index.html">BCPU documentation</a></li>
@@ -66,9 +63,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Storage locations</li>
+      <li>Release tags</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/storage/storage_locations.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/storage/release_tags.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -76,35 +73,33 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="storage-locations">
-<h1>Storage locations<a class="headerlink" href="#storage-locations" title="Permalink to this headline"></a></h1>
-<section id="nird">
-<h2>NIRD<a class="headerlink" href="#nird" title="Permalink to this headline"></a></h2>
-<p>The BCPU team has an allocated storage space on NIRD under /projects/NS9039K/.
-This is the main storage area for the team, and contains internally and
-externally produced data. The data structure of this space can be found
-<a class="reference internal" href="storage_structure.html"><span class="doc">here</span></a>.</p>
-<p>If you need to and cannot currently access this space, please contact our
-<a class="reference external" href="https://bjerknescpu.github.io/BCPU-documentation/support/support.html">internal support</a>.</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>To see the project quota and how much space is currently being used, use the
-command:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dusage</span> <span class="o">-</span><span class="n">p</span> <span class="n">ns9039k</span>
-</pre></div>
-</div>
-</div>
-<p>For information about NIRD, please refer to the
-<a class="reference external" href="https://documentation.sigma2.no/files_storage/nird.html">Sigma2 documentation</a>.</p>
-</section>
+  <section id="release-tags">
+<h1>Release tags<a class="headerlink" href="#release-tags" title="Permalink to this headline"></a></h1>
+<p>The data structure documented here for the NIRD storage location
+/projects/NS9039K/data/ is version controlled using GitHub. When significant
+changes are made to the data structure, the version number of the documentation
+will be updated and the version will be saved as a tag in GitHub.</p>
+<p>This allows users to go back and look at the commits for previous versions of
+the documentation, by using the ‘tags’ tab on GitHub via a
+<a class="reference external" href="https://github.com/BjerknesCPU/BCPU-data-structure/tags">web browser</a>.</p>
+<p>The version number is of the format X.Y.Z, where <em>X</em> refers to a major version
+which has backward-incompatible changes, <em>Y</em> refers to a minor version with
+backward-compatible functionality, and <em>Z</em> is a minor patch or bug fix. This
+version is also visible at the top of the side bar of this documentation page.</p>
+<figure class="align-left" id="tags" style="width: 100%">
+<a class="reference internal image-reference" href="../_images/tags.png"><img alt="../_images/tags.png" src="../_images/tags.png" style="width: 800px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 5 </span><span class="caption-text">Release tags on GitHub.</span><a class="headerlink" href="#tags" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../index.html" class="btn btn-neutral float-left" title="BCPU data structure" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="storage_structure.html" class="btn btn-neutral float-right" title="Storage structure" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="storage_structure.html" class="btn btn-neutral float-left" title="Storage structure" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="data_readme.html" class="btn btn-neutral float-right" title="README files" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
