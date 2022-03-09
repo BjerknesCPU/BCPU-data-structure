@@ -9,7 +9,8 @@ This is the main storage area for the team, and contains internally and
 externally produced data. The data structure of this space can be found
 :doc:`here <storage_structure>`.
 
-If you need to and cannot currently access this space, please contact our internal support.
+If you need to and cannot currently access this space, please contact our
+`internal support <https://bjerknescpu.github.io/BCPU-documentation/support/support.html>`_.
 
 .. tip::
   To see the project quota and how much space is currently being used, use the

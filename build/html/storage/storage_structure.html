@@ -43,7 +43,7 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="storage_locations.html">Storage locations</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Storage structure</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#status-of-restructure">Status of restructure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#restructure-timeline">Restructure timeline</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#top-level-structure">Top-level structure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#data-directory">Data directory</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#internal-data">Internal data</a></li>
@@ -58,6 +58,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="data_readme.html">README files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CMIP_data.html">CMIP data</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://bjerknescpu.github.io/BCPU-documentation/index.html">BCPU documentation</a></li>
 </ul>
 
@@ -88,15 +89,68 @@
   <section id="storage-structure">
 <h1>Storage structure<a class="headerlink" href="#storage-structure" title="Permalink to this headline"></a></h1>
 <p>This page is documentation of the BCPU storage space on NIRD.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
 <p>This page is currently under development, so expect frequent changes to the
 data structure, as it evolves and implementation begins.</p>
 </div>
-<section id="status-of-restructure">
-<h2>Status of restructure<a class="headerlink" href="#status-of-restructure" title="Permalink to this headline"></a></h2>
-<p>We are currently in the process of creating and migrating to a new directory
-structure to hold the contents of the NS9039K project space.</p>
+<section id="restructure-timeline">
+<h2>Restructure timeline<a class="headerlink" href="#restructure-timeline" title="Permalink to this headline"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>All data and files will only be moved via communication and agreement with
+file owners.</p>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 31%" />
+<col style="width: 16%" />
+<col style="width: 53%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Date</p></th>
+<th class="head"><p>Version</p></th>
+<th class="head"><p>Task</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>March 2022</p></td>
+<td><p>Pre-release
+(v0.x.x)</p></td>
+<td><p>Finalise the data structure rules and
+recommendations with group input.</p>
+<p>Move over some example data to test the
+new structure.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>April 2022</p></td>
+<td><p>Release
+(v1.x.x)</p></td>
+<td><p>Continual minor structure revisions.</p>
+<p>Begin to systematically move data into
+/projects/NS9039K/data/</p>
+<p>Write scripts to map and publish the
+new directory structure to the
+documentation pages. Other utility
+(e.g. monitoring file access for shared)
+datasets)</p>
+</td>
+</tr>
+<tr class="row-even"><td><p>May 2022</p></td>
+<td><p>Release
+(v2.x.x)</p></td>
+<td><p>Introduce /projects/NS9039K/users/ and
+begin to move user files across.</p>
+<p>Introduce /projects/NS9039K/repos/ and
+place local copies of some BCPU
+respositories there.</p>
+<p>Introduce a BCPU-toolbox repository as
+a place to share tools (e.g compression,
+diagnostic scripts etc.)</p>
+</td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="top-level-structure">
 <h2>Top-level structure<a class="headerlink" href="#top-level-structure" title="Permalink to this headline"></a></h2>
@@ -115,22 +169,25 @@ respective sections of this document.</p>
 <section id="data-directory">
 <h2>Data directory<a class="headerlink" href="#data-directory" title="Permalink to this headline"></a></h2>
 <p>The purpose of the <strong>data</strong> directory is to house data that we use within the
-BCPU. All datasets should be stored and documented here, following the
+BCPU. Datasets should be stored and documented here, following the
 best practices outlined on this page. This includes derived datasets, which are
 datasets to which the user has done some amount of processing, but that might
-still be useful for other users. Note that the <strong>data</strong> directory has a
-regulated structure, and so when making changes within this
-space, the rules and recommendations on this page should be followed.</p>
+still be useful for other users. Small amounts of data or data that has been
+heavily processed and does not have value to other users can be stored in user
+directories as is currently the case. Note that the <strong>data</strong> directory
+(/projects/NS9039K/data/) has a regulated structure, and so when making changes
+within this space, the rules and recommendations on this page should be
+followed.</p>
 <p>The data structure is composed of <em>collections</em> and <em>datasets</em>.</p>
 <p>A <em>collection</em> is a directory that contains other <em>collections</em> and/or
 <em>datasets</em>. It should contain a README.json based on the template, and
 indicate that the directory is a <em>collection</em> by having a value of
-isCollection:1.</p>
+“isCollection”: true.</p>
 <p>A <em>dataset</em> can contain multiple sub-directories for different variables,
 time aggregations or ensemble members. It should contain a README.json based
 on the template, and indicate that the directory is a <em>dataset</em> by having
-a value of isDataset:1.</p>
-<p>The data directory contains two top-level directories; <strong>external</strong> and
+a value of “isDataset”: true.</p>
+<p>The <strong>data</strong> directory contains two top-level directories; <strong>external</strong> and
 <strong>internal</strong>. The <strong>external</strong> directory is for model, reanalysis or
 obervational data which we have downloaded from an external source,
 for example, the ERA5 reanalysis. The <strong>internal</strong> directory is for experiments
@@ -144,17 +201,21 @@ NorCPM experiment.</p>
 </figure>
 <p>The general rules that accompany this structure are as follows:</p>
 <ol class="arabic simple">
-<li><p>Data must have the same number of directory levels as in
+<li><p>Data must have the at least the directory levels as seen in
 <a class="reference internal" href="#general-data"><span class="std std-numref">Fig. 2</span></a>. If there is a stand-alone
-experiment/dataset, it should still be placed in an
+<em>dataset</em>, it should still be placed in an
 “Experiment collection” or “Data provider” collection directory even if it is
-the only experiment/dataset in the collection. There should never be a
-mixture of collections and datasets in one directory.</p></li>
-<li><p>As shown in <a class="reference internal" href="#general-data"><span class="std std-numref">Fig. 2</span></a>, each collection and dataset
-directory must contain a README which follows the README template.</p></li>
+the only <em>dataset</em> in the <em>collection</em>. There should never be a
+mixture of <em>collections</em> and <em>datasets</em> in one directory. There can be
+additional directory levels within the <em>dataset</em> level, the exact structure
+of sub-directories within a <em>dataset</em> are not regulated, but there are some
+guidelines provided in this document.</p></li>
+<li><p>As shown in <a class="reference internal" href="#general-data"><span class="std std-numref">Fig. 2</span></a>, each <em>collection</em> and <em>dataset</em>
+directory must contain a README.json which follows the
+<a class="reference internal" href="data_readme.html"><span class="doc">README template</span></a>.</p></li>
 <li><p>Data must be contained in a sub-directory of the dataset level, rather than
 alongside the README and any other directories. For example,
-the experiment/dataset may have a large number of ensembles, and these
+the <em>dataset</em> may have a large number of ensembles, and these
 should be organized into one or more sub-directories so as to make the
 other files in the experiment more discoverable, recommendations for these
 names are included in the following two sections.</p></li>
@@ -204,7 +265,6 @@ and <strong>reanalysis</strong>.</p></li>
 <li><p>Use a <strong>reference</strong> directory to store reference experiments for a model
 system, including <strong>historical</strong> and <strong>piControl</strong> runs.</p></li>
 </ol>
-<p>Internal dataset sub-directories:</p>
 </section>
 <section id="external-data">
 <h3>External data<a class="headerlink" href="#external-data" title="Permalink to this headline"></a></h3>
@@ -222,12 +282,15 @@ are three directories; <strong>observation</strong>, <strong>reanalysis</strong>
 </figure>
 <p><strong>Data provider</strong>: a collection of datasets that are grouped based on data
 provider. This could be a centre (e.g. ECMWF or NOAA), or a multi-centre
-project (e.g. CMIP).</p>
+project (e.g. CMIP6).</p>
 <figure class="align-left" id="im-dataset" style="width: 10%">
 <a class="reference internal image-reference" href="../_images/im_dataset.png"><img alt="../_images/im_dataset.png" src="../_images/im_dataset.png" style="width: 100px;" /></a>
 </figure>
-<p><strong>Dataset</strong>: this is an individual experiment (e.g. rcp45), reanalysis product
-(e.g. ERA5), or observational records.</p>
+<p><strong>Dataset</strong>: this is usually an individual experiment (e.g. rcp45),
+reanalysis product (e.g. ERA5), or observational records. For collections with
+more complex structures (CMIP5, CMIP6 and MMLEA), the original structure of
+these data have been maintained to the best degree possible (see e.g.
+<a class="reference internal" href="CMIP_data.html"><span class="doc">CMIP data</span></a>.</p>
 <p>External dataset sub-directories:</p>
 <figure class="align-left" id="external-dataset">
 <a class="reference internal image-reference" href="../_images/external_dataset.png"><img alt="../_images/external_dataset.png" src="../_images/external_dataset.png" style="width: 800px;" /></a>
@@ -274,8 +337,8 @@ interface at <a class="reference external" href="http://ns9039k.web.sigma2.no/">
 <section id="more-information">
 <h2>More information<a class="headerlink" href="#more-information" title="Permalink to this headline"></a></h2>
 <p>For further information, or if you are having issues with the new data
-structure, please contact BCPU-support, or make an issue in the
-BjerknesCPU/BCPU-support GitHub repository.</p>
+structure, please contact our
+<a class="reference external" href="https://bjerknescpu.github.io/BCPU-documentation/support/support.html">internal support</a>.</p>
 </section>
 </section>
 

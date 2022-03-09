@@ -3,16 +3,50 @@ Storage structure
 
 This page is documentation of the BCPU storage space on NIRD.
 
-.. note::
+.. warning::
 
   This page is currently under development, so expect frequent changes to the
-  data structure, as it evolves and implementation begins. 
+  data structure, as it evolves and implementation begins.
 
-Status of restructure
----------------------
+Restructure timeline
+--------------------
 
-We are currently in the process of creating and migrating to a new directory
-structure to hold the contents of the NS9039K project space.
+.. note::
+
+  All data and files will only be moved via communication and agreement with
+  file owners.
+
++------------------------+------------+-----------------------------------------+
+| Date                   | Version    | Task                                    |
++========================+============+=========================================+
+| March 2022             | Pre-release| Finalise the data structure rules and   |
+|                        | (v0.x.x)   | recommendations with group input.       |
+|                        |            |                                         |
+|                        |            | Move over some example data to test the |
+|                        |            | new structure.                          |
++------------------------+------------+-----------------------------------------+
+| April 2022             | Release    | Continual minor structure revisions.    |
+|                        | (v1.x.x)   |                                         |
+|                        |            | Begin to systematically move data into  |
+|                        |            | /projects/NS9039K/data/                 |
+|                        |            |                                         |
+|                        |            | Write scripts to map and publish the    |
+|                        |            | new directory structure to the          |
+|                        |            | documentation pages. Other utility      |
+|                        |            | (e.g. monitoring file access for shared)|
+|                        |            | datasets)                               |
++------------------------+------------+-----------------------------------------+
+| May 2022               | Release    | Introduce /projects/NS9039K/users/ and  |
+|                        | (v2.x.x)   | begin to move user files across.        |
+|                        |            |                                         |
+|                        |            | Introduce /projects/NS9039K/repos/ and  |
+|                        |            | place local copies of some BCPU         |
+|                        |            | respositories there.                    |
+|                        |            |                                         |
+|                        |            | Introduce a BCPU-toolbox repository as  |
+|                        |            | a place to share tools (e.g compression,|
+|                        |            | diagnostic scripts etc.)                |
++------------------------+------------+-----------------------------------------+
 
 Top-level structure
 -------------------
@@ -38,26 +72,29 @@ Data directory
 --------------
 
 The purpose of the **data** directory is to house data that we use within the
-BCPU. All datasets should be stored and documented here, following the
+BCPU. Datasets should be stored and documented here, following the
 best practices outlined on this page. This includes derived datasets, which are
 datasets to which the user has done some amount of processing, but that might
-still be useful for other users. Note that the **data** directory has a
-regulated structure, and so when making changes within this
-space, the rules and recommendations on this page should be followed.
+still be useful for other users. Small amounts of data or data that has been
+heavily processed and does not have value to other users can be stored in user
+directories as is currently the case. Note that the **data** directory
+(/projects/NS9039K/data/) has a regulated structure, and so when making changes
+within this space, the rules and recommendations on this page should be
+followed.
 
 The data structure is composed of *collections* and *datasets*.
 
 A *collection* is a directory that contains other *collections* and/or
 *datasets*. It should contain a README.json based on the template, and
 indicate that the directory is a *collection* by having a value of
-isCollection:1.
+"isCollection": true.
 
 A *dataset* can contain multiple sub-directories for different variables,
 time aggregations or ensemble members. It should contain a README.json based
 on the template, and indicate that the directory is a *dataset* by having
-a value of isDataset:1.
+a value of "isDataset": true.
 
-The data directory contains two top-level directories; **external** and
+The **data** directory contains two top-level directories; **external** and
 **internal**. The **external** directory is for model, reanalysis or
 obervational data which we have downloaded from an external source,
 for example, the ERA5 reanalysis. The **internal** directory is for experiments
@@ -74,19 +111,23 @@ NorCPM experiment.
 
 The general rules that accompany this structure are as follows:
 
-#. Data must have the same number of directory levels as in
+#. Data must have the at least the directory levels as seen in
    :numref:`general-data`. If there is a stand-alone
-   experiment/dataset, it should still be placed in an
+   *dataset*, it should still be placed in an
    "Experiment collection" or "Data provider" collection directory even if it is
-   the only experiment/dataset in the collection. There should never be a
-   mixture of collections and datasets in one directory.
+   the only *dataset* in the *collection*. There should never be a
+   mixture of *collections* and *datasets* in one directory. There can be
+   additional directory levels within the *dataset* level, the exact structure
+   of sub-directories within a *dataset* are not regulated, but there are some
+   guidelines provided in this document.
 
-#. As shown in :numref:`general-data`, each collection and dataset
-   directory must contain a README which follows the README template.
+#. As shown in :numref:`general-data`, each *collection* and *dataset*
+   directory must contain a README.json which follows the
+   :doc:`README template <data_readme>`.
 
 #. Data must be contained in a sub-directory of the dataset level, rather than
    alongside the README and any other directories. For example,
-   the experiment/dataset may have a large number of ensembles, and these
+   the *dataset* may have a large number of ensembles, and these
    should be organized into one or more sub-directories so as to make the
    other files in the experiment more discoverable, recommendations for these
    names are included in the following two sections.
@@ -164,9 +205,6 @@ Some notes on this example:
 #. Use a **reference** directory to store reference experiments for a model
    system, including **historical** and **piControl** runs.
 
-Internal dataset sub-directories:
-
-
 External data
 #############
 
@@ -194,7 +232,7 @@ are three directories; **observation**, **reanalysis** and **model**.
 
 **Data provider**: a collection of datasets that are grouped based on data
 provider. This could be a centre (e.g. ECMWF or NOAA), or a multi-centre
-project (e.g. CMIP).
+project (e.g. CMIP6).
 
 .. figure::
   im_dataset.png
@@ -203,8 +241,11 @@ project (e.g. CMIP).
   :width: 100
   :align: left
 
-**Dataset**: this is an individual experiment (e.g. rcp45), reanalysis product
-(e.g. ERA5), or observational records.
+**Dataset**: this is usually an individual experiment (e.g. rcp45),
+reanalysis product (e.g. ERA5), or observational records. For collections with
+more complex structures (CMIP5, CMIP6 and MMLEA), the original structure of
+these data have been maintained to the best degree possible (see e.g.
+:doc:`CMIP data <CMIP_data>`.
 
 External dataset sub-directories:
 
@@ -262,5 +303,5 @@ More information
 ----------------
 
 For further information, or if you are having issues with the new data
-structure, please contact BCPU-support, or make an issue in the
-BjerknesCPU/BCPU-support GitHub repository.
+structure, please contact our
+`internal support <https://bjerknescpu.github.io/BCPU-documentation/support/support.html>`_.
