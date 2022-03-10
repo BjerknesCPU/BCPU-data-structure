@@ -13,7 +13,7 @@ Restructure timeline
 
 .. note::
 
-  All data and files will only be moved via communication and agreement with
+  Data and files will only be moved via communication and agreement with
   file owners.
 
 +------------------------+------------+-----------------------------------------+
@@ -33,8 +33,8 @@ Restructure timeline
 |                        |            | Write scripts to map and publish the    |
 |                        |            | new directory structure to the          |
 |                        |            | documentation pages. Other utility      |
-|                        |            | (e.g. monitoring file access for shared)|
-|                        |            | datasets)                               |
+|                        |            | scripts (e.g. monitoring file access    |
+|                        |            | for shared datasets).                   |
 +------------------------+------------+-----------------------------------------+
 | May 2022               | Release    | Introduce /projects/NS9039K/users/ and  |
 |                        | (v2.x.x)   | begin to move user files across.        |
@@ -165,8 +165,8 @@ experiments. Different model systems are defined by having different reference
 
 
 **Experiment collection**: a group of experiments which have some
-similarity, usually if a user is running a set of experiments, they would create
-their own experiment collection to hold all these experiments together.
+similarity, for example, a collection of experiments using NorCPM,
+or collections of reference experiments.
 
 
 .. figure::
@@ -176,8 +176,8 @@ their own experiment collection to hold all these experiments together.
   :width: 100
   :align: left
 
-**Experiment**: a single dataset with, for example, a particular forcing or data
-assimilation scheme.
+**Experiment**: a single dataset (or 'case') with, for example, a particular
+forcing or data assimilation scheme.
 
 :numref:`internal-dataset` shows an example for the internal data
 structure for one model system.
@@ -241,11 +241,10 @@ project (e.g. CMIP6).
   :width: 100
   :align: left
 
-**Dataset**: this is usually an individual experiment (e.g. rcp45),
-reanalysis product (e.g. ERA5), or observational records. For collections with
-more complex structures (CMIP5, CMIP6 and MMLEA), the original structure of
-these data have been maintained to the best degree possible (see e.g.
-:doc:`CMIP data <CMIP_data>`.
+**Dataset**: usually an individual experiment (e.g. rcp45),
+reanalysis product (e.g. ERA5), or observational records. For large collections
+(CMIP5, CMIP6 and MMLEA), the original structure of the data has been
+maintained as far as possible (e.g. :doc:`CMIP data <CMIP_data>`).
 
 External dataset sub-directories:
 
@@ -263,7 +262,7 @@ example, it could be compressed, or the file format could be converted.
 
 **derived/<ui>_<d>**: this is where datasets that have undergone some
 significant changes (e.g. regridding) should be stored. It is recommended to
-name sub-directories with <ui> as user initials (e.g. tb) and <d> as
+name sub-directories with <ui> as user initials (e.g. ib) and <d> as
 a brief description (e.g. 1x1).
 
 **scripts**: code used for downloading the data, preprocessing the data, or
@@ -274,9 +273,9 @@ Users directory
 
 Personal code, plots and other files belonging to a user should be
 placed in a directory within **users/**. It is recommended that the name of a
-user's directory matches their username. The structure of individual user
-directories is not regulated, and this space can be organized to the user's
-convenience.
+user's directory matches their name/username/initials. The structure of
+individual user directories is not regulated, and this space can be organized
+to the user's convenience.
 
 Projects directory
 ------------------
