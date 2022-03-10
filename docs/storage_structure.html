@@ -98,7 +98,7 @@ data structure, as it evolves and implementation begins.</p>
 <h2>Restructure timeline<a class="headerlink" href="#restructure-timeline" title="Permalink to this headline"></a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>All data and files will only be moved via communication and agreement with
+<p>Data and files will only be moved via communication and agreement with
 file owners.</p>
 </div>
 <table class="docutils align-default">
@@ -132,8 +132,8 @@ new structure.</p>
 <p>Write scripts to map and publish the
 new directory structure to the
 documentation pages. Other utility
-(e.g. monitoring file access for shared)
-datasets)</p>
+scripts (e.g. monitoring file access
+for shared datasets).</p>
 </td>
 </tr>
 <tr class="row-even"><td><p>May 2022</p></td>
@@ -238,13 +238,13 @@ experiments. Different model systems are defined by having different reference
 <a class="reference internal image-reference" href="_images/im_experiment_collection.png"><img alt="_images/im_experiment_collection.png" src="_images/im_experiment_collection.png" style="width: 100px;" /></a>
 </figure>
 <p><strong>Experiment collection</strong>: a group of experiments which have some
-similarity, usually if a user is running a set of experiments, they would create
-their own experiment collection to hold all these experiments together.</p>
+similarity, for example, a collection of experiments using NorCPM,
+or collections of reference experiments.</p>
 <figure class="align-left" id="im-experiment" style="width: 10%">
 <a class="reference internal image-reference" href="_images/im_experiment.png"><img alt="_images/im_experiment.png" src="_images/im_experiment.png" style="width: 100px;" /></a>
 </figure>
-<p><strong>Experiment</strong>: a single dataset with, for example, a particular forcing or data
-assimilation scheme.</p>
+<p><strong>Experiment</strong>: a single dataset (or ‘case’) with, for example, a particular
+forcing or data assimilation scheme.</p>
 <p><a class="reference internal" href="#internal-dataset"><span class="std std-numref">Fig. 3</span></a> shows an example for the internal data
 structure for one model system.
 We have provided some recommended directory names in grey and some example
@@ -286,11 +286,10 @@ project (e.g. CMIP6).</p>
 <figure class="align-left" id="im-dataset" style="width: 10%">
 <a class="reference internal image-reference" href="_images/im_dataset.png"><img alt="_images/im_dataset.png" src="_images/im_dataset.png" style="width: 100px;" /></a>
 </figure>
-<p><strong>Dataset</strong>: this is usually an individual experiment (e.g. rcp45),
-reanalysis product (e.g. ERA5), or observational records. For collections with
-more complex structures (CMIP5, CMIP6 and MMLEA), the original structure of
-these data have been maintained to the best degree possible (see e.g.
-<a class="reference internal" href="CMIP_data.html"><span class="doc">CMIP data</span></a>.</p>
+<p><strong>Dataset</strong>: usually an individual experiment (e.g. rcp45),
+reanalysis product (e.g. ERA5), or observational records. For large collections
+(CMIP5, CMIP6 and MMLEA), the original structure of the data has been
+maintained as far as possible (e.g. <a class="reference internal" href="CMIP_data.html"><span class="doc">CMIP data</span></a>).</p>
 <p>External dataset sub-directories:</p>
 <figure class="align-left" id="external-dataset">
 <a class="reference internal image-reference" href="_images/external_dataset.png"><img alt="_images/external_dataset.png" src="_images/external_dataset.png" style="width: 800px;" /></a>
@@ -303,7 +302,7 @@ source should be kept. This data does not have to be completely unmodified, for
 example, it could be compressed, or the file format could be converted.</p>
 <p><strong>derived/&lt;ui&gt;_&lt;d&gt;</strong>: this is where datasets that have undergone some
 significant changes (e.g. regridding) should be stored. It is recommended to
-name sub-directories with &lt;ui&gt; as user initials (e.g. tb) and &lt;d&gt; as
+name sub-directories with &lt;ui&gt; as user initials (e.g. ib) and &lt;d&gt; as
 a brief description (e.g. 1x1).</p>
 <p><strong>scripts</strong>: code used for downloading the data, preprocessing the data, or
 even diagnostic scripts can exist in this directory of the data structure.</p>
@@ -313,9 +312,9 @@ even diagnostic scripts can exist in this directory of the data structure.</p>
 <h2>Users directory<a class="headerlink" href="#users-directory" title="Permalink to this headline"></a></h2>
 <p>Personal code, plots and other files belonging to a user should be
 placed in a directory within <strong>users/</strong>. It is recommended that the name of a
-user’s directory matches their username. The structure of individual user
-directories is not regulated, and this space can be organized to the user’s
-convenience.</p>
+user’s directory matches their name/username/initials. The structure of
+individual user directories is not regulated, and this space can be organized
+to the user’s convenience.</p>
 </section>
 <section id="projects-directory">
 <h2>Projects directory<a class="headerlink" href="#projects-directory" title="Permalink to this headline"></a></h2>
