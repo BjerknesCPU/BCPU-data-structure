@@ -10,7 +10,7 @@ The data storage documentation built using this repository can be found
 here: https://bjerknescpu.github.io/BCPU-data-structure/index.html.
 
 Other documentation for the BCPU team can be found here:
-file:///home/tbi045/Projects/BCPU-documentation/docs/index.html.
+https://bjerknescpu.github.io/BCPU-documentation/.
 
 
 
