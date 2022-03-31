@@ -13,20 +13,15 @@ following text into a file called 'README.json' and edit as required::
   {
       "isDataset": true,
       "isCollection": false,
-
       "title": "ERA Interim",
       "version": null,
       "description": "A global atmospheric reanalysis produced by ECMWF, it has been superseded by the ERA5 reanalysis.",
       "ownerEmail": "tarkan.bilge@uib.no",
-
       "publicationType": null,
       "publicationDOI": null,
-
       "locationPoint": null,
       "locationBox": "name=Global; eastlimit=0; westlimit=359.25; northlimit=90; southlimit=-90",
-
       "timePeriod": "start=1979-01-01; end=2019-08-31",
-
       "dataSource": "https://www.ecmwf.int/en/forecasts/datasets/reanalysis-datasets/era-interim",
       "history": {
                     "2020-09-01" : "Data downloaded.",
