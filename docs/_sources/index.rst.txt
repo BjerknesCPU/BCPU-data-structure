@@ -9,6 +9,7 @@ Contents
 
   storage_locations
   storage_structure
+  data_practices
   release_tags
   data_readme
   CMIP_data
