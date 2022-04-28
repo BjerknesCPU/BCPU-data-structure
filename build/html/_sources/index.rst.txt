@@ -13,3 +13,4 @@ Contents
   release_tags
   data_readme
   CMIP_data
+  data_map
