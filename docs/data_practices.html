@@ -112,7 +112,7 @@ can use the data.</p>
 <p>Use the command <code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-l</span></code> to check file permissions, which are displayed as e.g.
 <code class="docutils literal notranslate"><span class="pre">-rw-r--r--</span></code>. In this output, permissions are provided for three groups;
 ‘user’, ‘group’ and ‘other’. The first character <code class="docutils literal notranslate"><span class="pre">-</span></code> corresponds to the file
-type, <code class="docutils literal notranslate"><span class="pre">-</span></code> indicating that it is a file, a <code class="docutils literal notranslate"><span class="pre">d</span></code> would indicate a directory.
+type, <code class="docutils literal notranslate"><span class="pre">-</span></code> indicating that it is a file, a <code class="docutils literal notranslate"><span class="pre">d</span></code> indicating a directory.
 The next three characters <code class="docutils literal notranslate"><span class="pre">rw-</span></code> are the ‘user’ permissions, the user being the
 owner of the file. The following three characters <code class="docutils literal notranslate"><span class="pre">r--</span></code> correspond to the
 ‘group’, and the last <code class="docutils literal notranslate"><span class="pre">r--</span></code> to ‘other’. Each character corresponds to a type
@@ -124,17 +124,15 @@ of permission defined below:</p>
 execute. The ‘group’ has permissions <code class="docutils literal notranslate"><span class="pre">r--</span></code>: read, not write and not execute.</p>
 <p>Permissions are modified by the file owner using the <code class="docutils literal notranslate"><span class="pre">chmod</span></code> command. To
 find out more about this command, use <code class="docutils literal notranslate"><span class="pre">man</span> <span class="pre">chmod</span></code>. The group can be modified
-by the file owner using the command <code class="docutils literal notranslate"><span class="pre">chgrp</span></code>, and in the NS9039K should always
-be ‘ns9039k’, e.g. <code class="docutils literal notranslate"><span class="pre">chgrp</span> <span class="pre">ns9039k</span> <span class="pre">&lt;file&gt;</span></code>.</p>
+by the file owner using the command <code class="docutils literal notranslate"><span class="pre">chgrp</span></code>, and in the NS9039K data directory
+should always be ‘ns9039k’, e.g. <code class="docutils literal notranslate"><span class="pre">chgrp</span> <span class="pre">ns9039k</span> <span class="pre">&lt;file&gt;</span></code>.</p>
 <p>For shared data, we want to make sure that other users in our group have read
-access to the files. This means we usually want permissions <code class="docutils literal notranslate"><span class="pre">-rw-rw-r--</span></code>. If
-you do not want others to be able to modify or delete the data, then the
-permissions <code class="docutils literal notranslate"><span class="pre">-rw-r--r--</span></code> are also okay. To apply these permissions apply:</p>
+access to the files. This means we usually want permissions <code class="docutils literal notranslate"><span class="pre">-rw-rw-r--</span></code>.
+To apply these permissions apply:</p>
 <p><code class="docutils literal notranslate"><span class="pre">-rw-rw-r--</span></code> : <code class="docutils literal notranslate"><span class="pre">chmod</span> <span class="pre">664</span> <span class="pre">&lt;files&gt;</span></code></p>
-<p><code class="docutils literal notranslate"><span class="pre">-rw-r--r--</span></code> : <code class="docutils literal notranslate"><span class="pre">chmod</span> <span class="pre">644</span> <span class="pre">&lt;files&gt;</span></code></p>
 <p>Remember that for directories, we should always have read and execute
 permissions for the user and the group, for example:</p>
-<p><code class="docutils literal notranslate"><span class="pre">drwxrxxr-x</span></code> : <code class="docutils literal notranslate"><span class="pre">chmod</span> <span class="pre">775</span> <span class="pre">&lt;directory&gt;</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">drwxrwxr-x</span></code> : <code class="docutils literal notranslate"><span class="pre">chmod</span> <span class="pre">775</span> <span class="pre">&lt;directories&gt;</span></code></p>
 </section>
 <section id="compressing-files">
 <h2>Compressing files<a class="headerlink" href="#compressing-files" title="Permalink to this headline"></a></h2>
@@ -143,6 +141,13 @@ compress NetCDF4 files. By using lossless compression, we can reduce file sizes
 without losing any information in the files. Compressed files can,
 however, take longer to load for subsequent analysis, so for data that will be
 used in tasks where high I/O speed is required, compression is not recommended.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">nccopy</span></code> command can be used to compress NetCDF data, for example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nccopy</span> <span class="o">-</span><span class="n">k</span> <span class="mi">4</span> <span class="o">-</span><span class="n">s</span> <span class="o">-</span><span class="n">d</span> <span class="o">&lt;</span><span class="n">compression_level</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">filename</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">compressed_filename</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>where compression_level is the deflation level, from 1 (faster but lower
+compression) to 9 (slower but higher compression). The recommended value for
+this is 5.</p>
 <p>If you need help with compressing your NetCDF4 files,
 please contact our
 <a class="reference external" href="https://bjerknescpu.github.io/BCPU-documentation/support/support.html">internal support</a>.</p>
