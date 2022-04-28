@@ -1,7 +1,7 @@
 Data structure map
 ==================
 
-Below is a data structure map for the NIRD NS9039K project data directory.
+Below is a data structure map for the NIRD NS9039K data directory.
 
 /projects/NS9039K/data/
 
@@ -23,8 +23,6 @@ Below is a data structure map for the NIRD NS9039K project data directory.
 |   |       |___ERSSTv5
 |   |---reanalysis
 |   |   |___ECMWF
-|   |       |---ERA5
-|   |       |---ERA20C
 |   |       |___ERAI
 |   |___model
 |       |---MMLEA
@@ -34,7 +32,6 @@ Below is a data structure map for the NIRD NS9039K project data directory.
 |       |   |---GFDL-ESM2M
 |       |   |---CESM1-CAM5
 |       |   |---CanESM2
-|       |   |---scripts
 |       |   |___GFDL-CM3
 |       |---CMIP6
 |       |   |---PMIP
