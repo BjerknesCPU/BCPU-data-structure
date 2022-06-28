@@ -19,18 +19,21 @@ Restructure timeline
 +------------------------+------------+-----------------------------------------+
 | Date                   | Version    | Task                                    |
 +========================+============+=========================================+
-| Current version        | Release    | Moved ERA data to new structure.        | 
-|                                       Added new documentation for ERA data.   | 
-|                        | (v2.0.0    | Added a data structure map image.       |
+| Current version        | Release    | Moved ERA data to new structure.        |
+|                        | (v2.0.0)   |                                         |
+|                        |            | Added new documentation for ERA data.   | 
+|                        |            |                                         |
+|                        |            | Added a data structure map image.       |
 +------------------------+------------+-----------------------------------------+
 | 01 August 2022         | Release    | Move all CMIP data to new structure     |
-|                        | (v3.x.x)   | Update the toolbox to contain useful    |
+|                        | (v3.x.x)   |                                         |
+|                        |            | Update the toolbox to contain useful    |
 |                        |            | compression and regridding scripts.     |
 |                        |            |                                         |
 |                        |            | Work on scripts to monitor file access. |
 +------------------------+------------+-----------------------------------------+
 | 01 September 2022      | Release    | All 'shared' data is in new structure.  |
-|                        | (v2.x.x)   |                                         |
+|                        | (v3.x.x)   |                                         |
 +------------------------+------------+-----------------------------------------+
 
 Top-level structure
