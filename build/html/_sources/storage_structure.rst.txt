@@ -19,33 +19,18 @@ Restructure timeline
 +------------------------+------------+-----------------------------------------+
 | Date                   | Version    | Task                                    |
 +========================+============+=========================================+
-| March 2022             | Pre-release| Finalise the data structure rules and   |
-|                        | (v0.x.x)   | recommendations with group input.       |
-|                        |            |                                         |
-|                        |            | Move over some example data to test the |
-|                        |            | new structure.                          |
+| Current version        | Release    | Moved ERA data to new structure.        | 
+|                                       Added new documentation for ERA data.   | 
+|                        | (v2.0.0    | Added a data structure map image.       |
 +------------------------+------------+-----------------------------------------+
-| April 2022             | Release    | Continual minor structure revisions.    |
-|                        | (v1.x.x)   |                                         |
-|                        |            | Begin to systematically move data into  |
-|                        |            | /projects/NS9039K/data/                 |
+| 01 August 2022         | Release    | Move all CMIP data to new structure     |
+|                        | (v3.x.x)   | Update the toolbox to contain useful    |
+|                        |            | compression and regridding scripts.     |
 |                        |            |                                         |
-|                        |            | Write scripts to map and publish the    |
-|                        |            | new directory structure to the          |
-|                        |            | documentation pages. Other utility      |
-|                        |            | scripts (e.g. monitoring file access    |
-|                        |            | for shared datasets).                   |
+|                        |            | Work on scripts to monitor file access. |
 +------------------------+------------+-----------------------------------------+
-| May 2022               | Release    | Introduce /projects/NS9039K/users/ and  |
-|                        | (v2.x.x)   | begin to move user files across.        |
-|                        |            |                                         |
-|                        |            | Introduce /projects/NS9039K/repos/ and  |
-|                        |            | place local copies of some BCPU         |
-|                        |            | respositories there.                    |
-|                        |            |                                         |
-|                        |            | Introduce a BCPU-toolbox repository as  |
-|                        |            | a place to share tools (e.g compression,|
-|                        |            | diagnostic scripts etc.)                |
+| 01 September 2022      | Release    | All 'shared' data is in new structure.  |
+|                        | (v2.x.x)   |                                         |
 +------------------------+------------+-----------------------------------------+
 
 Top-level structure
