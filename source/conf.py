@@ -15,8 +15,8 @@ project = 'BCPU-data-structure'
 copyright = '2021, BCPU'
 author = 'tarkan.bilge@uib.no'
 
-release = '1.0'
-version = '1.0.0'
+release = '2.0'
+version = '2.0.0'
 
 # =============================================================================
 # Path configuration

@@ -1,37 +1,80 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
   <title>CMIP data &mdash; BCPU-data-structure 1.0 documentation</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
-    <script src="_static/js/theme.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="ERA data" href="ERA_data.html" />
     <link rel="prev" title="README files" href="data_readme.html" /> 
 </head>
 
-<body class="wy-body-for-nav"> 
+<body class="wy-body-for-nav">
+
+   
   <div class="wy-grid-for-nav">
+    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
+          
+
+          
             <a href="index.html" class="icon icon-home"> BCPU-data-structure
+          
+
+          
           </a>
+
+          
+            
+            
               <div class="version">
                 1.0.0
               </div>
+            
+          
+
+          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -39,7 +82,18 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="storage_locations.html">Storage locations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="storage_structure.html">Storage structure</a></li>
@@ -63,35 +117,77 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="ERA_data.html">ERA data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_manager.html">Data manager notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data_map.html">Data structure map</a></li>
 </ul>
 
+            
+          
         </div>
+        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">BCPU-data-structure</a>
+        
       </nav>
 
+
       <div class="wy-nav-content">
+        
         <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
+    
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
       <li>CMIP data</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
+        
+          
             <a href="_sources/CMIP_data.rst.txt" rel="nofollow"> View page source</a>
+          
+        
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-             
+            
   <section id="cmip-data">
-<h1>CMIP data<a class="headerlink" href="#cmip-data" title="Permalink to this headline"></a></h1>
+<h1>CMIP data<a class="headerlink" href="#cmip-data" title="Permalink to this heading">¶</a></h1>
 <p>This page contains information on how data from the Coupled Model
 Intercomparison Project (CMIP) are stored in  our NS9039K data structure in
 NIRD. This includes both CMIP5 and CMIP6 data, which have a slightly different
@@ -100,9 +196,9 @@ structure.</p>
 small change has been made to the CMIP5 data structure in order to integrate it
 with our data storage structure.</p>
 <section id="cmip6">
-<h2>CMIP6<a class="headerlink" href="#cmip6" title="Permalink to this headline"></a></h2>
+<h2>CMIP6<a class="headerlink" href="#cmip6" title="Permalink to this heading">¶</a></h2>
 <section id="original-structure">
-<h3>Original structure<a class="headerlink" href="#original-structure" title="Permalink to this headline"></a></h3>
+<h3>Original structure<a class="headerlink" href="#original-structure" title="Permalink to this heading">¶</a></h3>
 <p>Information is avaiable about CMIP6 metadata
 <a class="reference external" href="https://pcmdi.llnl.gov/CMIP6/Guide/dataUsers.html">here</a>.</p>
 <blockquote>
@@ -117,12 +213,12 @@ with our data storage structure.</p>
 </div></blockquote>
 </section>
 <section id="nird-structure">
-<h3>NIRD structure<a class="headerlink" href="#nird-structure" title="Permalink to this headline"></a></h3>
+<h3>NIRD structure<a class="headerlink" href="#nird-structure" title="Permalink to this heading">¶</a></h3>
 <p>CMIP6 data is stored in NIRD under /projects/NS9039K/data/external/model/CMIP6.
 We use the same structure as the ESGF structure in our internal storage on NIRD.</p>
 </section>
 <section id="downloading-cmip6-data">
-<h3>Downloading CMIP6 data<a class="headerlink" href="#downloading-cmip6-data" title="Permalink to this headline"></a></h3>
+<h3>Downloading CMIP6 data<a class="headerlink" href="#downloading-cmip6-data" title="Permalink to this heading">¶</a></h3>
 <p>Download
 <a class="reference external" href="https://esgf-node.llnl.gov/projects/cmip6/">here</a>.</p>
 <p>When downloading CMIP6 data from the ESGF node, if we do not have existing data
@@ -132,7 +228,7 @@ first and third lines in <a class="reference internal" href="#cmip6-search"><spa
 <figure class="align-default" id="cmip6-search">
 <a class="reference internal image-reference" href="_images/ESGF_CMIP6.png"><img alt="An image of CMIP6 data search results." src="_images/ESGF_CMIP6.png" style="width: 800px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 6 </span><span class="caption-text">Metadata provided in the ESGF CMIP6 data search.</span><a class="headerlink" href="#cmip6-search" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Fig. 6 </span><span class="caption-text">Metadata provided in the ESGF CMIP6 data search.</span><a class="headerlink" href="#cmip6-search" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 <p>Please do not modify the names of the CMIP6 data after downloading, the
@@ -151,9 +247,9 @@ structure (except the MIP era, Activity ID, Institution ID and version).</p>
 </section>
 </section>
 <section id="cmip5">
-<h2>CMIP5<a class="headerlink" href="#cmip5" title="Permalink to this headline"></a></h2>
+<h2>CMIP5<a class="headerlink" href="#cmip5" title="Permalink to this heading">¶</a></h2>
 <section id="id2">
-<h3>Original structure<a class="headerlink" href="#id2" title="Permalink to this headline"></a></h3>
+<h3>Original structure<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h3>
 <p>Information is available about CMIP5 metadata
 <a class="reference external" href="https://pcmdi.llnl.gov/mips/cmip5/docs/CMIP5_output_metadata_requirements_4Jan11_clean.pdf?id=84">here</a>,</p>
 <blockquote>
@@ -170,7 +266,7 @@ structure (except the MIP era, Activity ID, Institution ID and version).</p>
 (e.g. day or Omon) and version, is not required.</p>
 </section>
 <section id="id4">
-<h3>NIRD structure<a class="headerlink" href="#id4" title="Permalink to this headline"></a></h3>
+<h3>NIRD structure<a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h3>
 <p>CMIP5 data is stored in NIRD under /projects/NS9039K/data/external/model/CMIP5.
 Our structure is based on the ESGF structure but differs in that the &lt;output&gt; is
 divided into ‘PMIP’ and ‘CMIP’. ‘PMIP’ contains data from the Paleoclimate
@@ -179,7 +275,7 @@ Modelling Intercomparison Project (the experiments ‘past1000’, ‘lgm’ and
 The rest of the structure remains the same.</p>
 </section>
 <section id="downloading-cmip5-data">
-<h3>Downloading CMIP5 data<a class="headerlink" href="#downloading-cmip5-data" title="Permalink to this headline"></a></h3>
+<h3>Downloading CMIP5 data<a class="headerlink" href="#downloading-cmip5-data" title="Permalink to this heading">¶</a></h3>
 <p>Download
 <a class="reference external" href="https://esgf-node.llnl.gov/search/cmip5/">here</a>.</p>
 <p>When downloading CMIP6 data from the ESGF node, if we do not have existing data
@@ -189,14 +285,14 @@ All the information is available in the data search results, for example, in the
 <figure class="align-default" id="cmip5-search">
 <a class="reference internal image-reference" href="_images/ESGF_CMIP5.png"><img alt="An image of CMIP5 data search results." src="_images/ESGF_CMIP5.png" style="width: 800px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 7 </span><span class="caption-text">Metadata provided in the ESGF CMIP5 data search.</span><a class="headerlink" href="#cmip5-search" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Fig. 7 </span><span class="caption-text">Metadata provided in the ESGF CMIP5 data search.</span><a class="headerlink" href="#cmip5-search" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 <p>Please do not modify the names of the CMIP5 data after downloading.</p>
 </section>
 </section>
 <section id="processing-cmip-data">
-<h2>Processing CMIP data<a class="headerlink" href="#processing-cmip-data" title="Permalink to this headline"></a></h2>
+<h2>Processing CMIP data<a class="headerlink" href="#processing-cmip-data" title="Permalink to this heading">¶</a></h2>
 <p>If you would like to compress the CMIP data, you can do this and leave it in
 the original data structure. For other processing tasks such as regridding,
 or generation of new composite variables, please save the output of such
@@ -211,33 +307,50 @@ corresponds to CMIP6 data regridded to a regular 1.5 degree grid.</p>
 
 
            </div>
+           
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="data_readme.html" class="btn btn-neutral float-left" title="README files" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
         <a href="ERA_data.html" class="btn btn-neutral float-right" title="ERA data" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="data_readme.html" class="btn btn-neutral float-left" title="README files" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2021, BCPU.</p>
-  </div>
+    <p>
+        &#169; Copyright 2021, BCPU.
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
         </div>
       </div>
+
     </section>
+
   </div>
-  <script>
+  
+
+  <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

@@ -1,0 +1,288 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Data manager notes &mdash; BCPU-data-structure 1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Data structure map" href="data_map.html" />
+    <link rel="prev" title="ERA data" href="ERA_data.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> BCPU-data-structure
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="storage_locations.html">Storage locations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="storage_structure.html">Storage structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_practices.html">Data best practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="release_tags.html">Release tags</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_readme.html">README files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CMIP_data.html">CMIP data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ERA_data.html">ERA data</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Data manager notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#updating-the-data-structure">Updating the data structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#updating-the-data-structure-map">Updating the data structure map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#data-compression">Data compression</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="data_map.html">Data structure map</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">BCPU-data-structure</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Data manager notes</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/data_manager.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="data-manager-notes">
+<h1>Data manager notes<a class="headerlink" href="#data-manager-notes" title="Permalink to this heading">¶</a></h1>
+<p>These notes are intended for the data manager(s) of NS9039K.</p>
+<section id="updating-the-data-structure">
+<h2>Updating the data structure<a class="headerlink" href="#updating-the-data-structure" title="Permalink to this heading">¶</a></h2>
+<p>The data structure currently holds external data products. As we built a culture of
+using the new data structure, it is important to encourage team members to download
+any new external data products (e.g. CMIP6 data) into the new data structure.</p>
+<p>The new structure also requires all users to move their personal directories from
+/projects/NS9039K/shared/ to /projects/NS9039K/users. This may be a disruptive
+process, and has largely not been started. The practicallity of this move could
+be reassessed, but if it is decided to move all personal directories, then the
+data manager(s) should assist users in doing so.</p>
+<p>Internal data is still largely stored in /projects/NS9039K/shared/ and on Betzy.
+Transferring this into the structure in /projects/NS9039K/data/internal would
+help the new structure to be more widely used.</p>
+<p>When making updates to the structure itself, the documentation in this repository
+should be modified accordingly. There is also a version and ‘Release tag’ system
+whereby major changes should be given a new GitHub tag and version number. This
+will help us to keep track of major changes and refer back to previous versions
+of the data structure. Documentation on Releases and Tags can be found
+<a class="reference external" href="https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository">here</a>.</p>
+</section>
+<section id="updating-the-data-structure-map">
+<h2>Updating the data structure map<a class="headerlink" href="#updating-the-data-structure-map" title="Permalink to this heading">¶</a></h2>
+<p>The data manager(s) should update the data structure map roughly once a month.
+This is done by the following steps.</p>
+<ol class="arabic simple">
+<li><p>Take a clone of the BCPU-data-structure code, it is recommended to clone this into /projects/NS9039K/www/$USER/ because this allows for changes to be checked <a class="reference external" href="http://ns9039k.web.sigma2.no">here</a> before pushing them.</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">data_structure_map.py</span></code>.</p></li>
+<li><p>Add, commit and push changes to the external repository.</p></li>
+</ol>
+<p>Note that in order for the data structure map to show all relevant directories,
+there must be a README.json in each dataset in /projects/NS9039K/data/. These
+README.json files contain some basic metadata that is read in by the script
+which generates the data map image.</p>
+</section>
+<section id="data-compression">
+<h2>Data compression<a class="headerlink" href="#data-compression" title="Permalink to this heading">¶</a></h2>
+<p>It is important to compress files in NS9039K so that we can remain within our
+allocation quota. Compression of NetCDF files is a common task that members of
+the team have to perform, and the data manager can assist with this task.</p>
+<p>When compressing files for another user, the permissions of the file are lost.
+The current system that we use, is that the data manager has some additional
+permissions to change the file ownership back to the original user after
+compressing files.</p>
+<p>New permissions will have to be requested for the data manager from
+<a class="reference external" href="mailto:support&#37;&#52;&#48;metacenter&#46;no">support<span>&#64;</span>metacenter<span>&#46;</span>no</a>. Last time it was Thierry Toutain who set this
+up for us.</p>
+<p>Currently there is a script set up with additional permissions.</p>
+<p>The the internal script does this:
+| chown -R –from=tbi045 $1 /trd-project4/NS9039K/$2</p>
+<p>The current script is applied like this:
+| sudo /usr/local/bin/chown_ns9039k.sh $1 $2</p>
+<div class="line-block">
+<div class="line">$1 is the username of the user to transfer ownership to.</div>
+<div class="line">$2 is the relative path to the desired files from /trd-project4/NS9039K/.</div>
+</div>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="data_map.html" class="btn btn-neutral float-right" title="Data structure map" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="ERA_data.html" class="btn btn-neutral float-left" title="ERA data" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, BCPU.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

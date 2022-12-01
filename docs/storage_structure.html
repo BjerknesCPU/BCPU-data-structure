@@ -1,37 +1,80 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
   <title>Storage structure &mdash; BCPU-data-structure 1.0 documentation</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
-    <script src="_static/js/theme.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Data best practices" href="data_practices.html" />
     <link rel="prev" title="Storage locations" href="storage_locations.html" /> 
 </head>
 
-<body class="wy-body-for-nav"> 
+<body class="wy-body-for-nav">
+
+   
   <div class="wy-grid-for-nav">
+    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
+          
+
+          
             <a href="index.html" class="icon icon-home"> BCPU-data-structure
+          
+
+          
           </a>
+
+          
+            
+            
               <div class="version">
                 1.0.0
               </div>
+            
+          
+
+          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -39,7 +82,18 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="storage_locations.html">Storage locations</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Storage structure</a><ul>
@@ -62,35 +116,77 @@
 <li class="toctree-l1"><a class="reference internal" href="data_readme.html">README files</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CMIP_data.html">CMIP data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ERA_data.html">ERA data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_manager.html">Data manager notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data_map.html">Data structure map</a></li>
 </ul>
 
+            
+          
         </div>
+        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">BCPU-data-structure</a>
+        
       </nav>
 
+
       <div class="wy-nav-content">
+        
         <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
+    
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
       <li>Storage structure</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
+        
+          
             <a href="_sources/storage_structure.rst.txt" rel="nofollow"> View page source</a>
+          
+        
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-             
+            
   <section id="storage-structure">
-<h1>Storage structure<a class="headerlink" href="#storage-structure" title="Permalink to this headline"></a></h1>
+<h1>Storage structure<a class="headerlink" href="#storage-structure" title="Permalink to this heading">¶</a></h1>
 <p>This page is documentation of the BCPU storage space on NIRD.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -98,18 +194,13 @@
 data structure, as it evolves and implementation begins.</p>
 </div>
 <section id="restructure-timeline">
-<h2>Restructure timeline<a class="headerlink" href="#restructure-timeline" title="Permalink to this headline"></a></h2>
+<h2>Restructure timeline<a class="headerlink" href="#restructure-timeline" title="Permalink to this heading">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Data and files will only be moved via communication and agreement with
 file owners.</p>
 </div>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 31%" />
-<col style="width: 16%" />
-<col style="width: 53%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Date</p></th>
 <th class="head"><p>Version</p></th>
@@ -143,21 +234,21 @@ compression and regridding scripts.</p>
 </table>
 </section>
 <section id="top-level-structure">
-<h2>Top-level structure<a class="headerlink" href="#top-level-structure" title="Permalink to this headline"></a></h2>
+<h2>Top-level structure<a class="headerlink" href="#top-level-structure" title="Permalink to this heading">¶</a></h2>
 <p>A high-level structure diagram is included below to demonstrate the top-level
 directories. This includes the directories <strong>data</strong>, <strong>users</strong>,
 <strong>projects</strong>, <strong>repos</strong> and <strong>www</strong>.</p>
 <figure class="align-default" id="top-level">
 <a class="reference internal image-reference" href="_images/top_level.png"><img alt="An image of the top level data structure including the directories described in the next section." src="_images/top_level.png" style="width: 800px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 1 </span><span class="caption-text">The top-level data structure.</span><a class="headerlink" href="#top-level" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">The top-level data structure.</span><a class="headerlink" href="#top-level" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 <p>The purpose and structure of each of these directories is described in their
 respective sections of this document.</p>
 </section>
 <section id="data-directory">
-<h2>Data directory<a class="headerlink" href="#data-directory" title="Permalink to this headline"></a></h2>
+<h2>Data directory<a class="headerlink" href="#data-directory" title="Permalink to this heading">¶</a></h2>
 <p>The purpose of the <strong>data</strong> directory is to house data that we use within the
 BCPU. Datasets should be stored and documented here, following the
 best practices outlined on this page. This includes derived datasets, which are
@@ -186,7 +277,7 @@ NorCPM experiment.</p>
 <figure class="align-default" id="general-data">
 <a class="reference internal image-reference" href="_images/general_data.png"><img alt="An image of the general structure of the data directory." src="_images/general_data.png" style="width: 800px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 2 </span><span class="caption-text">General structure of the data directory</span><a class="headerlink" href="#general-data" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">General structure of the data directory</span><a class="headerlink" href="#general-data" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 <p>The general rules that accompany this structure are as follows:</p>
@@ -211,7 +302,7 @@ other files in the experiment more discoverable, recommendations for these
 names are included in the following two sections.</p></li>
 </ol>
 <section id="internal-data">
-<h3>Internal data<a class="headerlink" href="#internal-data" title="Permalink to this headline"></a></h3>
+<h3>Internal data<a class="headerlink" href="#internal-data" title="Permalink to this heading">¶</a></h3>
 <p>We have designed some rules and some recommendations for organizing data from
 our internal experiments. The general structure of the <strong>internal</strong> directory
 can be seen in <a class="reference internal" href="#general-data"><span class="std std-numref">Fig. 2</span></a>.</p>
@@ -243,7 +334,7 @@ general structure. These should be used where possible and appropriate.</p>
 <figure class="align-left" id="internal-dataset">
 <a class="reference internal image-reference" href="_images/internal_dataset.png"><img alt="_images/internal_dataset.png" src="_images/internal_dataset.png" style="width: 800px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 3 </span><span class="caption-text">Example structure of an internal dataset</span><a class="headerlink" href="#internal-dataset" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">Example structure of an internal dataset</span><a class="headerlink" href="#internal-dataset" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 <p>Some notes on this example:</p>
@@ -257,7 +348,7 @@ system, including <strong>historical</strong> and <strong>piControl</strong> run
 </ol>
 </section>
 <section id="external-data">
-<h3>External data<a class="headerlink" href="#external-data" title="Permalink to this headline"></a></h3>
+<h3>External data<a class="headerlink" href="#external-data" title="Permalink to this heading">¶</a></h3>
 <p>The general structure of the <strong>external</strong> directory is similar to that of the
 <strong>internal</strong> one, it is divided into directories for <strong>Data type</strong>,
 <strong>Data provider</strong> and <strong>Dataset</strong> as seen in <a class="reference internal" href="#general-data"><span class="std std-numref">Fig. 2</span></a>.
@@ -284,7 +375,7 @@ maintained as far as possible (e.g. <a class="reference internal" href="CMIP_dat
 <figure class="align-left" id="external-dataset">
 <a class="reference internal image-reference" href="_images/external_dataset.png"><img alt="_images/external_dataset.png" src="_images/external_dataset.png" style="width: 800px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 4 </span><span class="caption-text">The structure of an external dataset</span><a class="headerlink" href="#external-dataset" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">The structure of an external dataset</span><a class="headerlink" href="#external-dataset" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 <p><strong>original</strong>: this is where the original data downloaded from the external
@@ -299,7 +390,7 @@ even diagnostic scripts can exist in this directory of the data structure.</p>
 </section>
 </section>
 <section id="users-directory">
-<h2>Users directory<a class="headerlink" href="#users-directory" title="Permalink to this headline"></a></h2>
+<h2>Users directory<a class="headerlink" href="#users-directory" title="Permalink to this heading">¶</a></h2>
 <p>Personal code, plots and other files belonging to a user should be
 placed in a directory within <strong>users/</strong>. It is recommended that the name of a
 user’s directory matches their name/username/initials. The structure of
@@ -307,24 +398,24 @@ individual user directories is not regulated, and this space can be organized
 to the user’s convenience.</p>
 </section>
 <section id="projects-directory">
-<h2>Projects directory<a class="headerlink" href="#projects-directory" title="Permalink to this headline"></a></h2>
+<h2>Projects directory<a class="headerlink" href="#projects-directory" title="Permalink to this heading">¶</a></h2>
 <p>Projects can contain data, scripts and outputs, and it may be
 convenient to store these related files in one directory, in this case a
 directory named after the project can be placed in the <strong>projects/</strong> directory.
 The organization of these spaces is the responsibility of the project manager.</p>
 </section>
 <section id="repos-directory">
-<h2>Repos directory<a class="headerlink" href="#repos-directory" title="Permalink to this headline"></a></h2>
+<h2>Repos directory<a class="headerlink" href="#repos-directory" title="Permalink to this heading">¶</a></h2>
 <p>Local copies of shared Git repositories will reside here, there
 is a version of all of these files within the BjerknesCPU GitHub.</p>
 </section>
 <section id="www-directory">
-<h2>www directory<a class="headerlink" href="#www-directory" title="Permalink to this headline"></a></h2>
+<h2>www directory<a class="headerlink" href="#www-directory" title="Permalink to this heading">¶</a></h2>
 <p>This directory contains files to be accessible through the web
 interface at <a class="reference external" href="http://ns9039k.web.sigma2.no/">http://ns9039k.web.sigma2.no/</a>.</p>
 </section>
 <section id="more-information">
-<h2>More information<a class="headerlink" href="#more-information" title="Permalink to this headline"></a></h2>
+<h2>More information<a class="headerlink" href="#more-information" title="Permalink to this heading">¶</a></h2>
 <p>For further information, or if you are having issues with the new data
 structure, please contact our
 <a class="reference external" href="https://bjerknescpu.github.io/BCPU-documentation/support/support.html">internal support</a>.</p>
@@ -333,33 +424,50 @@ structure, please contact our
 
 
            </div>
+           
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="storage_locations.html" class="btn btn-neutral float-left" title="Storage locations" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
         <a href="data_practices.html" class="btn btn-neutral float-right" title="Data best practices" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="storage_locations.html" class="btn btn-neutral float-left" title="Storage locations" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2021, BCPU.</p>
-  </div>
+    <p>
+        &#169; Copyright 2021, BCPU.
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
         </div>
       </div>
+
     </section>
+
   </div>
-  <script>
+  
+
+  <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>
