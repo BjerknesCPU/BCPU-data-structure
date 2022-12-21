@@ -3,38 +3,15 @@ Storage structure
 
 This page is documentation of the BCPU storage space on NIRD.
 
-.. warning::
-
-  This page is currently under development, so expect frequent changes to the
-  data structure, as it evolves and implementation begins.
-
-Restructure timeline
---------------------
+Restructure status
+------------------
 
 .. note::
 
   Data and files will only be moved via communication and agreement with
   file owners.
 
-+------------------------+------------+-----------------------------------------+
-| Date                   | Version    | Task                                    |
-+========================+============+=========================================+
-| Current version        | Release    | Moved ERA data to new structure.        |
-|                        | (v2.0.0)   |                                         |
-|                        |            | Added new documentation for ERA data.   | 
-|                        |            |                                         |
-|                        |            | Added a data structure map image.       |
-+------------------------+------------+-----------------------------------------+
-| 01 August 2022         | Release    | Move all CMIP data to new structure     |
-|                        | (v3.x.x)   |                                         |
-|                        |            | Update the toolbox to contain useful    |
-|                        |            | compression and regridding scripts.     |
-|                        |            |                                         |
-|                        |            | Work on scripts to monitor file access. |
-+------------------------+------------+-----------------------------------------+
-| 01 September 2022      | Release    | All 'shared' data is in new structure.  |
-|                        | (v3.x.x)   |                                         |
-+------------------------+------------+-----------------------------------------+
+Most shared external datasets are now located in /projects/NS9039K/data/external/. Some internal data is also present in /projects/NS9039K/data/internal/ although the majority of this data is yet to be moved in. The /projects/NS9039K/users/ and /projects/NS9039K/projects/ spaces have been set up, and it is recommended that users move their data across into these from the /projects/NS9039K/shared/ area. 
 
 Top-level structure
 -------------------

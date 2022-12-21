@@ -8,7 +8,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Storage structure &mdash; BCPU-data-structure 1.0 documentation</title>
+  <title>Storage structure &mdash; BCPU-data-structure 2.0 documentation</title>
   
 
   
@@ -69,7 +69,7 @@
             
             
               <div class="version">
-                1.0.0
+                2.0.0
               </div>
             
           
@@ -97,7 +97,7 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="storage_locations.html">Storage locations</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Storage structure</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#restructure-timeline">Restructure timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#restructure-status">Restructure status</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#top-level-structure">Top-level structure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#data-directory">Data directory</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#internal-data">Internal data</a></li>
@@ -188,50 +188,14 @@
   <section id="storage-structure">
 <h1>Storage structure<a class="headerlink" href="#storage-structure" title="Permalink to this heading">¶</a></h1>
 <p>This page is documentation of the BCPU storage space on NIRD.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This page is currently under development, so expect frequent changes to the
-data structure, as it evolves and implementation begins.</p>
-</div>
-<section id="restructure-timeline">
-<h2>Restructure timeline<a class="headerlink" href="#restructure-timeline" title="Permalink to this heading">¶</a></h2>
+<section id="restructure-status">
+<h2>Restructure status<a class="headerlink" href="#restructure-status" title="Permalink to this heading">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Data and files will only be moved via communication and agreement with
 file owners.</p>
 </div>
-<table class="docutils align-default">
-<thead>
-<tr class="row-odd"><th class="head"><p>Date</p></th>
-<th class="head"><p>Version</p></th>
-<th class="head"><p>Task</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Current version</p></td>
-<td><p>Release
-(v2.0.0)</p></td>
-<td><p>Moved ERA data to new structure.</p>
-<p>Added new documentation for ERA data.</p>
-<p>Added a data structure map image.</p>
-</td>
-</tr>
-<tr class="row-odd"><td><p>01 August 2022</p></td>
-<td><p>Release
-(v3.x.x)</p></td>
-<td><p>Move all CMIP data to new structure</p>
-<p>Update the toolbox to contain useful
-compression and regridding scripts.</p>
-<p>Work on scripts to monitor file access.</p>
-</td>
-</tr>
-<tr class="row-even"><td><p>01 September 2022</p></td>
-<td><p>Release
-(v3.x.x)</p></td>
-<td><p>All ‘shared’ data is in new structure.</p></td>
-</tr>
-</tbody>
-</table>
+<p>Most shared external datasets are now located in /projects/NS9039K/data/external/. Some internal data is also present in /projects/NS9039K/data/internal/ although the majority of this data is yet to be moved in. The /projects/NS9039K/users/ and /projects/NS9039K/projects/ spaces have been set up, and it is recommended that users move their data across into these from the /projects/NS9039K/shared/ area.</p>
 </section>
 <section id="top-level-structure">
 <h2>Top-level structure<a class="headerlink" href="#top-level-structure" title="Permalink to this heading">¶</a></h2>
