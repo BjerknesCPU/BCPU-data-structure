@@ -14,4 +14,5 @@ Contents
   data_readme
   CMIP_data
   ERA_data
+  data_manager
   data_map
